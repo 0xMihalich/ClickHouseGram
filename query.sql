@@ -18,7 +18,7 @@ SETTINGS index_granularity = 8192;
 2. Добавляем в таблицу токен
 */
 
-INSERT INTO dns_format.telegram VALUES ('0123456789:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'test')
+INSERT INTO TABLE.telegram VALUES ('0123456789:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'test')
 
 
 /*
