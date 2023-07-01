@@ -5,8 +5,8 @@
 -- TABLE.telegram definition
 CREATE TABLE TABLE.telegram
 (
-    `token`    String        COMMENT 'Токен бота',
-    `bot_type` String UNIQUE COMMENT 'Назначение бота'
+    `token`    String COMMENT 'Токен бота',
+    `bot_type` String COMMENT 'Назначение бота'
 )
 ENGINE = MergeTree
 PRIMARY KEY token
