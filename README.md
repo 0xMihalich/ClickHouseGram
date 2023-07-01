@@ -1,8 +1,10 @@
 # ClickHouseGram
 ## Получение текстовых сообщений из Telegram средствами Clickhouse
 
-Предлагаемое решение состоит из таблицы TABLE.telegram, содержащей колонки token (уникальный токен бота, полученый от [@BotFather](https://t.me/BotFather)) и bot_type(назначение бота, например, test),
-представления TABLE.telegram_messages, получающее все новые сообщения от текущего бота и представления TABLE.telegram_clear_messages, очищающее обработанные сообщения.
+Предлагаемое решение состоит из таблицы TABLE.telegram, содержащей колонки token (уникальный токен бота, полученый от [@BotFather](https://t.me/BotFather))
+и bot_type(назначение бота, например, bot_for_tests),
+представления TABLE.telegram_messages, получающее все новые сообщения от текущего бота и
+представления TABLE.telegram_clear_messages, очищающее обработанные сообщения.
 ```SQL
 /*
 Примеры запросов
