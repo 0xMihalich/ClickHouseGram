@@ -18,7 +18,7 @@ SETTINGS index_granularity = 8192;
 2. Добавляем в таблицу токен
 */
 
-INSERT INTO TABLE.telegram VALUES ('0123456789:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'test')
+INSERT INTO TABLE.telegram VALUES ('0123456789:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'bot_for_tests')
 
 
 /*
@@ -75,7 +75,7 @@ FROM
                             token,
                             '/getupdates')
                 FROM TABLE.telegram AS t
-               WHERE t.bot_type = 'test'
+               WHERE t.bot_type = 'bot_for_tests'
              ), 'JSONAsString')
 );
 
@@ -102,7 +102,7 @@ FROM url((
                 SELECT max(update_id) + 1 AS update_id
                 FROM TABLE.telegram_messages
                ) AS tm, TABLE.telegram AS t
-               WHERE t.bot_type = 'test'
+               WHERE t.bot_type = 'bot_for_tests'
          ), 'JSONAsString');
 
 
