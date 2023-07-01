@@ -21,3 +21,6 @@ SELECT * FROM TABLE.telegram_messages
 -- Очистка сообщений
 SELECT * FROM TABLE.telegram_clear_messages
 ```
+
+Т.к. данное решение создано с целью ознакомления, оба представления ссылаются на токен бота, имеющий bot_type='bot_for_tests'.
+Так же предполагается, что ключ bot_type является уникальным для каждого view
