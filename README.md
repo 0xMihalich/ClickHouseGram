@@ -12,6 +12,9 @@
 Примеры запросов
 */
 
+-- Добавление токена в таблицу TABLE.telegram
+INSERT INTO TABLE.telegram VALUES ('0123456789:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'bot_for_tests')
+
 -- Получение новых сообщений
 SELECT * FROM TABLE.telegram_messages
 
