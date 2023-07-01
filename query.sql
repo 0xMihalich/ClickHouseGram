@@ -1,7 +1,3 @@
-/*
-1. Создаем таблицу для хранения токенов
-*/
-
 -- TABLE.telegram definition
 CREATE TABLE TABLE.telegram
 (
@@ -13,17 +9,6 @@ PRIMARY KEY token
 ORDER BY token
 SETTINGS index_granularity = 8192;
 
-
-/*
-2. Добавляем в таблицу токен
-*/
-
-INSERT INTO TABLE.telegram VALUES ('0123456789:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'bot_for_tests')
-
-
-/*
-3. Создаем представление для получения новых сообщений
-*/
 
 -- TABLE.telegram_messages source
 CREATE VIEW TABLE.telegram_messages
@@ -80,10 +65,6 @@ FROM
 );
 
 
-/*
-4. Создаем представление для очистки обработанных сообщений
-*/
-
 -- TABLE.telegram_clear_messages source
 CREATE VIEW TABLE.telegram_clear_messages
 (
@@ -104,14 +85,3 @@ FROM url((
                ) AS tm, TABLE.telegram AS t
                WHERE t.bot_type = 'bot_for_tests'
          ), 'JSONAsString');
-
-
-/*
-Примеры запросов
-*/
-
--- Получение новых сообщений
-SELECT * FROM TABLE.telegram_messages
-
--- Очистка сообщений
-SELECT * FROM TABLE.telegram_clear_messages
