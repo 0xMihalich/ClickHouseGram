@@ -5,7 +5,7 @@ CREATE VIEW TABLE.telegram_clear_messages
     `clear_data` Bool     COMMENT 'Статус операции'
 ) AS
 SELECT
-    now() AS time,
+    now()                 AS time,
     JSON_VALUE(*, '$.ok') AS clear_data
 FROM url((
           SELECT concat('https://api.telegram.org/bot',
